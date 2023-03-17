@@ -1,14 +1,19 @@
-const Character = ({character}) => {
+const Character = ({ character }) => {
+    const { name, house, image } = character;
 
-    // const handleClick = (e) => {
-    //     updateCharacterList(character.name)
-    // }
+    return (
+        <div className="information">
+            
+                <h2><u>{name}</u></h2>
+                <p>House: {house}</p>
+                <p>Species: {character.species}</p>
+                <br/><>Wand: {character.wand.wood}</>,
+                <p> {character.wand.core},</p>
+                <p> {character.wand.length}</p>
+                <img src={image} alt={`${name} from ${house}`} />
 
-    return(
-        <li>
-            {character.name}
-    
-        </li>
+            
+        </div>
     );
 
 }
